@@ -1,1 +1,5 @@
 *-backups/
+~*
+*.log
+*-cache
+*-bak
