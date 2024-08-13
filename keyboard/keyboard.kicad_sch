@@ -1408,7 +1408,7 @@
 				)
 			)
 		)
-		(symbol "MCU_ST_STM32F0:STM32F072CBUx"
+		(symbol "MCU_ST_STM32F0:STM32F072CBTx"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1421,7 +1421,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "STM32F072CBUx"
+			(property "Value" "STM32F072CBTx"
 				(at 10.16 39.37 0)
 				(effects
 					(font
@@ -1430,7 +1430,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm"
+			(property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm"
 				(at -12.7 -35.56 0)
 				(effects
 					(font
@@ -1449,7 +1449,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "STMicroelectronics Arm Cortex-M0 MCU, 128KB flash, 16KB RAM, 48 MHz, 2.0-3.6V, 37 GPIO, UFQFPN48"
+			(property "Description" "STMicroelectronics Arm Cortex-M0 MCU, 128KB flash, 16KB RAM, 48 MHz, 2.0-3.6V, 37 GPIO, LQFP48"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1475,7 +1475,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "QFN*1EP*7x7mm*P0.5mm*"
+			(property "ki_fp_filters" "LQFP*7x7mm*P0.5mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1484,7 +1484,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "STM32F072CBUx_0_1"
+			(symbol "STM32F072CBTx_0_1"
 				(rectangle
 					(start -12.7 -35.56)
 					(end 15.24 38.1)
@@ -1497,7 +1497,7 @@
 					)
 				)
 			)
-			(symbol "STM32F072CBUx_1_1"
+			(symbol "STM32F072CBTx_1_1"
 				(pin power_in line
 					(at -2.54 40.64 270)
 					(length 2.54)
@@ -2473,24 +2473,6 @@
 						)
 					)
 				)
-				(pin passive line
-					(at 0 -38.1 90)
-					(length 2.54) hide
-					(name "VSS"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "49"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
 				(pin bidirectional line
 					(at -15.24 25.4 0)
 					(length 2.54)
@@ -3030,15 +3012,20 @@
 				)
 			)
 		)
-		(symbol "Regulator_Linear:AP2112K-3.3"
-			(pin_names
-				(offset 0.254)
-			)
+		(symbol "Regulator_Linear:AMS1117-3.3"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "U"
-				(at -5.08 5.715 0)
+				(at -3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "AMS1117-3.3"
+				(at 0 3.175 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3046,17 +3033,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "AP2112K-3.3"
-				(at 0 5.715 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-				(at 0 8.255 0)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+				(at 0 5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3064,8 +3042,8 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
-				(at 0 2.54 0)
+			(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+				(at 2.54 -6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -3073,7 +3051,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
+			(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3091,7 +3069,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "SOT?23?5*"
+			(property "ki_fp_filters" "SOT?223*TabPin2*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3100,10 +3078,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "AP2112K-3.3_0_1"
+			(symbol "AMS1117-3.3_0_1"
 				(rectangle
-					(start -5.08 4.445)
-					(end 5.08 -5.08)
+					(start -5.08 -5.08)
+					(end 5.08 1.905)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -3113,11 +3091,11 @@
 					)
 				)
 			)
-			(symbol "AP2112K-3.3_1_1"
+			(symbol "AMS1117-3.3_1_1"
 				(pin power_in line
-					(at -7.62 2.54 0)
+					(at 0 -7.62 90)
 					(length 2.54)
-					(name "VIN"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3132,10 +3110,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -7.62 90)
+				(pin power_out line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "GND"
+					(name "VO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3150,10 +3128,10 @@
 						)
 					)
 				)
-				(pin input line
+				(pin power_in line
 					(at -7.62 0 0)
 					(length 2.54)
-					(name "EN"
+					(name "VI"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3161,42 +3139,6 @@
 						)
 					)
 					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin no_connect line
-					(at 5.08 0 180)
-					(length 2.54) hide
-					(name "NC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_out line
-					(at 7.62 2.54 180)
-					(length 2.54)
-					(name "VOUT"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4193,12 +4135,6 @@
 		(uuid "1386aae4-d357-4173-bbb4-69278dc828eb")
 	)
 	(junction
-		(at 104.14 36.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "139c6321-72f3-439b-bfa7-4a21c665933e")
-	)
-	(junction
 		(at 191.77 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4209,12 +4145,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "1a29a6f2-e592-4306-9fcb-44c21d85fe27")
-	)
-	(junction
-		(at 109.22 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1a6ee066-d8f0-4eea-aea6-281f2859a567")
 	)
 	(junction
 		(at 203.2 109.22)
@@ -4301,34 +4231,28 @@
 		(uuid "37c78d29-5eb8-460d-8ed7-8a814c875d4b")
 	)
 	(junction
-		(at 60.96 87.63)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "393f8582-5234-4ff8-8da4-e3bd608037e1")
-	)
-	(junction
 		(at 215.9 129.54)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "39d2475d-9884-4de5-b5f2-8ebd6591fd4d")
 	)
 	(junction
-		(at 93.98 36.83)
+		(at 104.14 36.83)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3a054da4-afc4-47c9-acf8-f2dcf8c02add")
+	)
+	(junction
+		(at 104.14 26.67)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3b2af388-6a2b-4d60-96e3-cb890758fcbb")
 	)
 	(junction
 		(at 262.89 26.67)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3c7f74b0-7e75-45c0-8ab3-c1028809e73f")
-	)
-	(junction
-		(at 116.84 36.83)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3cc22f5f-d3be-4483-b539-cf06170a3bff")
 	)
 	(junction
 		(at 262.89 129.54)
@@ -4385,10 +4309,22 @@
 		(uuid "531a857a-1636-4bb0-b81c-70da8bc03e4e")
 	)
 	(junction
+		(at 116.84 36.83)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "53b88972-7311-4af9-a671-3cf7dadf561a")
+	)
+	(junction
 		(at 215.9 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "5a38e8af-233d-44b7-9c06-990a12a83ccd")
+	)
+	(junction
+		(at 60.96 87.63)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5bad3708-5bd6-4660-aa95-c2d8a49671f9")
 	)
 	(junction
 		(at 185.42 162.56)
@@ -4493,12 +4429,6 @@
 		(uuid "773e5e84-fd49-490e-907b-b844a2278351")
 	)
 	(junction
-		(at 93.98 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7d6a9bd9-811a-4904-a117-fb45d7558f86")
-	)
-	(junction
 		(at 208.28 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4556,7 +4486,7 @@
 		(at 58.42 87.63)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "89c69c82-f7ee-4913-bf50-26fe45d888f2")
+		(uuid "89e23293-3128-4b8b-bf42-9107c3b9d5ed")
 	)
 	(junction
 		(at 243.84 142.24)
@@ -4569,12 +4499,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "904667c5-8337-4b08-8bb3-7a3f7ee6c1a6")
-	)
-	(junction
-		(at 104.14 26.67)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "93537d51-b939-4b79-b79b-6bfedf7e63b2")
 	)
 	(junction
 		(at 149.86 121.92)
@@ -4812,14 +4736,6 @@
 		(at 46.99 53.34)
 		(uuid "53ca14a2-c178-4317-b377-09a837144fce")
 	)
-	(no_connect
-		(at -41.91 7.62)
-		(uuid "6d15c141-ea92-40e8-bcc1-42a0928bd050")
-	)
-	(no_connect
-		(at -21.59 85.09)
-		(uuid "6e2d47a3-8884-480c-ab79-2929efc5a4f8")
-	)
 	(wire
 		(pts
 			(xy 262.89 88.9) (xy 262.89 109.22)
@@ -4882,6 +4798,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 26.67) (xy 109.22 26.67)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "062436c4-be21-4299-aa9c-109508aeed63")
+	)
+	(wire
+		(pts
 			(xy 63.5 43.18) (xy 67.31 43.18)
 		)
 		(stroke
@@ -4909,6 +4835,16 @@
 			(type default)
 		)
 		(uuid "09ae15d5-d8f8-4366-8dcb-e066b2e9f3f6")
+	)
+	(wire
+		(pts
+			(xy 116.84 34.29) (xy 116.84 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a07032a-894e-4ab7-b808-3ad4ccc6ba9b")
 	)
 	(wire
 		(pts
@@ -5012,7 +4948,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 36.83) (xy 93.98 38.1)
+			(xy 104.14 36.83) (xy 104.14 38.1)
 		)
 		(stroke
 			(width 0)
@@ -5062,7 +4998,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 25.4) (xy 93.98 26.67)
+			(xy 104.14 25.4) (xy 104.14 26.67)
 		)
 		(stroke
 			(width 0)
@@ -5109,16 +5045,6 @@
 			(type default)
 		)
 		(uuid "25e5a58a-f4e4-46a7-acc7-5c1e8271d929")
-	)
-	(wire
-		(pts
-			(xy 104.14 35.56) (xy 104.14 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "25fca26c-7f16-4d7a-811e-e3da130713c4")
 	)
 	(wire
 		(pts
@@ -5242,6 +5168,16 @@
 	)
 	(wire
 		(pts
+			(xy 104.14 26.67) (xy 104.14 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "394f7887-e0d5-4d19-81f8-27d9b469e0bb")
+	)
+	(wire
+		(pts
 			(xy 167.64 81.28) (xy 167.64 88.9)
 		)
 		(stroke
@@ -5249,16 +5185,6 @@
 			(type default)
 		)
 		(uuid "3972ea62-d150-420e-b5d6-b9e1f6909912")
-	)
-	(wire
-		(pts
-			(xy 93.98 36.83) (xy 104.14 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3a02ae86-afa6-4e43-96f6-9eda9ed784c6")
 	)
 	(wire
 		(pts
@@ -5582,6 +5508,16 @@
 	)
 	(wire
 		(pts
+			(xy 116.84 36.83) (xy 133.35 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "688a0ca8-6b76-447d-ae4f-e73dc2b70061")
+	)
+	(wire
+		(pts
 			(xy 232.41 101.6) (xy 243.84 101.6)
 		)
 		(stroke
@@ -5619,16 +5555,6 @@
 			(type default)
 		)
 		(uuid "6d39dc36-dcbf-4dc5-af69-37667d6ddbc1")
-	)
-	(wire
-		(pts
-			(xy 104.14 36.83) (xy 116.84 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6dc31f67-536b-4f89-946d-eeb23c24ddf2")
 	)
 	(wire
 		(pts
@@ -5682,7 +5608,7 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 35.56) (xy 93.98 36.83)
+			(xy 104.14 35.56) (xy 104.14 36.83)
 		)
 		(stroke
 			(width 0)
@@ -5789,16 +5715,6 @@
 			(type default)
 		)
 		(uuid "8aea1195-0657-4cf3-ad28-db54baa73624")
-	)
-	(wire
-		(pts
-			(xy 109.22 26.67) (xy 109.22 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8b8dc06c-5622-4137-9e61-fd1474cc4508")
 	)
 	(wire
 		(pts
@@ -5962,16 +5878,6 @@
 	)
 	(wire
 		(pts
-			(xy 60.96 87.63) (xy 63.5 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a0ce73dc-095b-45eb-a187-15c55b874a62")
-	)
-	(wire
-		(pts
 			(xy 133.35 26.67) (xy 133.35 27.94)
 		)
 		(stroke
@@ -6092,16 +5998,6 @@
 	)
 	(wire
 		(pts
-			(xy 104.14 26.67) (xy 109.22 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "afb67b10-a2c6-4415-bdd0-82061eee76da")
-	)
-	(wire
-		(pts
 			(xy 238.76 109.22) (xy 238.76 129.54)
 		)
 		(stroke
@@ -6149,16 +6045,6 @@
 			(type default)
 		)
 		(uuid "b49436ed-d834-4dc6-bbc9-b52f1f3f163b")
-	)
-	(wire
-		(pts
-			(xy 93.98 26.67) (xy 93.98 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b4edca82-fb2f-4d29-8d5e-aacfdc8d9728")
 	)
 	(wire
 		(pts
@@ -6402,7 +6288,7 @@
 	)
 	(wire
 		(pts
-			(xy 116.84 36.83) (xy 133.35 36.83)
+			(xy 104.14 36.83) (xy 116.84 36.83)
 		)
 		(stroke
 			(width 0)
@@ -6452,16 +6338,6 @@
 	)
 	(wire
 		(pts
-			(xy 93.98 26.67) (xy 104.14 26.67)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e5f6c290-98e6-4108-ae26-aa1f86e92d8a")
-	)
-	(wire
-		(pts
 			(xy 133.35 35.56) (xy 133.35 36.83)
 		)
 		(stroke
@@ -6469,16 +6345,6 @@
 			(type default)
 		)
 		(uuid "e7f676cb-e85f-4ed6-b207-000750a81e13")
-	)
-	(wire
-		(pts
-			(xy 104.14 26.67) (xy 104.14 27.94)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ec91556e-760c-47af-a04e-0919b210c65b")
 	)
 	(wire
 		(pts
@@ -6519,6 +6385,16 @@
 			(type default)
 		)
 		(uuid "eff07abf-a926-4b9f-8c2c-14167650b40c")
+	)
+	(wire
+		(pts
+			(xy 60.96 87.63) (xy 63.5 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f94c0ed2-e318-4640-baec-b4c6dbc8592a")
 	)
 	(wire
 		(pts
@@ -7532,7 +7408,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 220.98 118.11 0)
 			(effects
 				(font
@@ -7855,7 +7731,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C202424"
+		(property "LCSC" "C127478"
 			(at 173.99 52.07 0)
 			(effects
 				(font
@@ -7961,7 +7837,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 196.85 118.11 0)
 			(effects
 				(font
@@ -8067,7 +7943,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 256.54 118.11 0)
 			(effects
 				(font
@@ -8345,7 +8221,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 220.98 158.75 0)
 			(effects
 				(font
@@ -8451,7 +8327,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 137.16 97.79 0)
 			(effects
 				(font
@@ -8539,7 +8415,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909627"
+		(property "LCSC" "C14663"
 			(at 194.31 31.75 0)
 			(effects
 				(font
@@ -8645,7 +8521,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 208.28 118.11 0)
 			(effects
 				(font
@@ -8751,7 +8627,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 185.42 138.43 0)
 			(effects
 				(font
@@ -8857,7 +8733,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 172.72 158.75 0)
 			(effects
 				(font
@@ -9049,7 +8925,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 172.72 97.79 0)
 			(effects
 				(font
@@ -9241,7 +9117,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 232.41 138.43 0)
 			(effects
 				(font
@@ -9413,7 +9289,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 137.16 138.43 0)
 			(effects
 				(font
@@ -9603,7 +9479,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C185599"
+		(property "LCSC" "C57112"
 			(at 240.03 35.56 0)
 			(effects
 				(font
@@ -9881,7 +9757,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 196.85 138.43 0)
 			(effects
 				(font
@@ -9968,7 +9844,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C3760867"
+		(property "LCSC" "C7472536"
 			(at 63.5 25.4 90)
 			(effects
 				(font
@@ -10074,7 +9950,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 243.84 158.75 0)
 			(effects
 				(font
@@ -10180,7 +10056,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 220.98 138.43 0)
 			(effects
 				(font
@@ -10286,7 +10162,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 256.54 97.79 0)
 			(effects
 				(font
@@ -10305,235 +10181,6 @@
 			(project "keyboard"
 				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
 					(reference "D41")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "MCU_ST_STM32F0:STM32F072CBUx")
-		(at 60.96 128.27 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "49e114e4-6f50-4d5c-b552-764fa4f3f820")
-		(property "Reference" "U2"
-			(at 73.66 88.9 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "STM32F072CBU6"
-			(at 65.532 165.354 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm"
-			(at 48.26 163.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32f072cb.pdf"
-			(at 60.96 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "STMicroelectronics Arm Cortex-M0 MCU, 128KB flash, 16KB RAM, 48 MHz, 2.0-3.6V, 37 GPIO, UFQFPN48"
-			(at 60.96 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "UFQFPN-48(7x7)"
-			(at 60.96 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C1342708"
-			(at 60.96 128.27 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "35"
-			(uuid "b941a988-522f-4e06-afbb-02b6d654d9fd")
-		)
-		(pin "2"
-			(uuid "26305553-7d51-4307-90e8-20e35950fcf3")
-		)
-		(pin "27"
-			(uuid "a07b2d47-aa31-48ef-a6d4-e0277c8257b6")
-		)
-		(pin "30"
-			(uuid "f613c423-ef70-481a-8cb9-cb0124d6eee2")
-		)
-		(pin "24"
-			(uuid "b59e5ec3-d43f-426e-973e-b43cbb6fdd61")
-		)
-		(pin "18"
-			(uuid "fdcfc1fc-db05-4aec-9b0b-a8fe022f446a")
-		)
-		(pin "28"
-			(uuid "8a07dcb8-d6fa-426e-921a-1e8c532bbcef")
-		)
-		(pin "37"
-			(uuid "d7bfbceb-88a6-4e0b-a63c-8074b9ff0ab3")
-		)
-		(pin "23"
-			(uuid "778c950c-cf23-44f2-9dd8-8fece039d11e")
-		)
-		(pin "38"
-			(uuid "fe18bd35-35f6-46f7-8e9d-388b83b9fdc2")
-		)
-		(pin "13"
-			(uuid "2791dfab-8f5b-49cc-9bf1-fb0249011ab3")
-		)
-		(pin "4"
-			(uuid "f4492503-b5c0-4389-a563-521bd7f12c75")
-		)
-		(pin "40"
-			(uuid "4364fd16-7e20-497e-801e-2f579e0caf2a")
-		)
-		(pin "36"
-			(uuid "d93f4f89-d4fe-49f0-89a8-e59bf1b39c96")
-		)
-		(pin "11"
-			(uuid "886e5f6f-14c8-463f-ad12-5651dd215449")
-		)
-		(pin "43"
-			(uuid "e8f22b66-9e1a-44d3-829b-7a724e35c77c")
-		)
-		(pin "9"
-			(uuid "e1f7ab23-d97b-48cc-afc5-aacc02c9fa41")
-		)
-		(pin "32"
-			(uuid "2cf99f06-f079-4934-b1bc-30614531dd67")
-		)
-		(pin "15"
-			(uuid "282bb2b3-1fd9-4615-9428-f765bdb2392c")
-		)
-		(pin "41"
-			(uuid "8381ea6e-f1de-4037-8d0d-3d205e1a0849")
-		)
-		(pin "31"
-			(uuid "9b3a0406-8863-4a63-a1e4-ee1e5f8d5050")
-		)
-		(pin "45"
-			(uuid "168d8820-92e9-42dc-b87f-00bd449b29a3")
-		)
-		(pin "39"
-			(uuid "b964bed9-17a3-4c82-af58-acd93b563221")
-		)
-		(pin "6"
-			(uuid "24537ab0-0a2a-4ae4-b334-9cfe4515acac")
-		)
-		(pin "5"
-			(uuid "82549f83-51d4-4ea3-b70a-abb8f025c7cc")
-		)
-		(pin "19"
-			(uuid "927b4079-8de1-48b8-9e34-d4a4f3d4433d")
-		)
-		(pin "21"
-			(uuid "b2a8b6e9-7113-4ea7-8546-3faa6d5e7850")
-		)
-		(pin "3"
-			(uuid "da61672d-186c-4e66-9c46-82af46de7506")
-		)
-		(pin "25"
-			(uuid "0bef1eac-1dc7-4ea5-bea4-de4a3ba202f2")
-		)
-		(pin "29"
-			(uuid "791fcccd-84ab-49d4-9ade-729b28006e65")
-		)
-		(pin "20"
-			(uuid "3c70a6c8-5a96-4a31-a118-8a5b51da4f1b")
-		)
-		(pin "17"
-			(uuid "5980ab4b-1e6e-4cb9-8538-c9722dcad0e4")
-		)
-		(pin "26"
-			(uuid "1df350aa-62b7-4bbd-a134-175ace2c26bd")
-		)
-		(pin "22"
-			(uuid "520e98cb-55d2-400c-ba4b-851a1396c487")
-		)
-		(pin "47"
-			(uuid "186dfd28-2444-4310-9987-18cb01b14f91")
-		)
-		(pin "42"
-			(uuid "e54cf401-502b-496a-b0ef-7d33fafc418a")
-		)
-		(pin "49"
-			(uuid "12a7e7a5-c0ba-4273-8ba6-a0519a35e5d9")
-		)
-		(pin "1"
-			(uuid "d30711d6-02bd-44d9-9310-6d4870bf22bd")
-		)
-		(pin "10"
-			(uuid "efcb94f2-f3b7-4d6b-a920-7ecbfc086ef4")
-		)
-		(pin "12"
-			(uuid "1e823118-6dc1-4282-9cf4-5c83bdd22807")
-		)
-		(pin "33"
-			(uuid "e2ff2ed2-2302-4b45-b8d1-b8b12383e27a")
-		)
-		(pin "46"
-			(uuid "30542480-e51e-4dd8-a9b9-cef7fdfd120d")
-		)
-		(pin "16"
-			(uuid "9a06160f-31f2-46bd-9d77-9da1a22c88b4")
-		)
-		(pin "14"
-			(uuid "927e63e3-6135-49e1-8b2e-5be79595c4fc")
-		)
-		(pin "7"
-			(uuid "e3a0b0c8-dc80-474c-a973-b06fbd350590")
-		)
-		(pin "44"
-			(uuid "bc46f6c7-ebb6-4937-b9e3-ad26b220b8b2")
-		)
-		(pin "48"
-			(uuid "a8aea4c9-7cde-4fb2-8902-aaf5b02c2f39")
-		)
-		(pin "34"
-			(uuid "3c3dbfbd-2c9e-4136-a413-dd6bf6a2e436")
-		)
-		(pin "8"
-			(uuid "8ae72ffc-94df-405f-b588-85b75985cb29")
-		)
-		(instances
-			(project ""
-				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
-					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -10793,7 +10440,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 220.98 97.79 0)
 			(effects
 				(font
@@ -10819,7 +10466,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 93.98 38.1 0)
+		(at 104.14 38.1 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10828,7 +10475,7 @@
 		(fields_autoplaced yes)
 		(uuid "5a0084ff-bf1f-40d8-ac2b-c250632f391d")
 		(property "Reference" "#PWR08"
-			(at 93.98 44.45 0)
+			(at 104.14 44.45 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10837,7 +10484,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 93.98 43.18 0)
+			(at 104.14 43.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10846,7 +10493,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 38.1 0)
+			(at 104.14 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10855,7 +10502,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 38.1 0)
+			(at 104.14 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10864,7 +10511,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 93.98 38.1 0)
+			(at 104.14 38.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10966,7 +10613,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 267.97 158.75 0)
 			(effects
 				(font
@@ -11271,7 +10918,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C185599"
+		(property "LCSC" "C57112"
 			(at 262.89 35.56 0)
 			(effects
 				(font
@@ -11377,7 +11024,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 243.84 138.43 0)
 			(effects
 				(font
@@ -11465,7 +11112,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909627"
+		(property "LCSC" "C14663"
 			(at 171.45 31.75 0)
 			(effects
 				(font
@@ -11807,7 +11454,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C543856"
+		(property "LCSC" "C23186"
 			(at 49.53 33.02 90)
 			(effects
 				(font
@@ -11913,7 +11560,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 256.54 138.43 0)
 			(effects
 				(font
@@ -12105,7 +11752,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 137.16 118.11 0)
 			(effects
 				(font
@@ -12193,7 +11840,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2918512"
+		(property "LCSC" "C19666"
 			(at 160.02 31.75 0)
 			(effects
 				(font
@@ -12299,7 +11946,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 161.29 138.43 0)
 			(effects
 				(font
@@ -12427,7 +12074,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
+		(property "Value" "22u"
 			(at 137.16 33.0199 0)
 			(effects
 				(font
@@ -12472,7 +12119,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2691405"
+		(property "LCSC" "C59461"
 			(at 133.35 31.75 0)
 			(effects
 				(font
@@ -12625,7 +12272,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C491555"
+		(property "LCSC" "C1002"
 			(at 252.73 26.67 90)
 			(effects
 				(font
@@ -12730,6 +12377,95 @@
 			(project "keyboard"
 				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
 					(reference "SW6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Linear:AMS1117-3.3")
+		(at 116.84 26.67 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "81950ceb-1b0a-4368-892b-781a950e035d")
+		(property "Reference" "U3"
+			(at 116.84 20.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "AMS1117-3.3"
+			(at 116.84 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 116.84 21.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.advanced-monolithic.com/pdf/ds1117.pdf"
+			(at 119.38 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "1A Low Dropout regulator, positive, 3.3V fixed output, SOT-223"
+			(at 116.84 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "SOT-223"
+			(at 116.84 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C6186"
+			(at 116.84 26.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "09fc9217-1601-4949-a45a-ff62ea3800cd")
+		)
+		(pin "2"
+			(uuid "a40aab40-dab3-4838-8785-93d6c7f5ae44")
+		)
+		(pin "3"
+			(uuid "9a5468f5-9aa2-4c19-96f0-1b376c727be9")
+		)
+		(instances
+			(project ""
+				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -13075,7 +12811,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 149.86 97.79 0)
 			(effects
 				(font
@@ -13353,7 +13089,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 196.85 97.79 0)
 			(effects
 				(font
@@ -13459,7 +13195,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 185.42 118.11 0)
 			(effects
 				(font
@@ -13565,7 +13301,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 208.28 97.79 0)
 			(effects
 				(font
@@ -13671,7 +13407,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 232.41 158.75 0)
 			(effects
 				(font
@@ -13948,7 +13684,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 256.54 158.75 0)
 			(effects
 				(font
@@ -14140,7 +13876,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 208.28 138.43 0)
 			(effects
 				(font
@@ -14225,7 +13961,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C543856"
+		(property "LCSC" "C23186"
 			(at 49.53 30.48 90)
 			(effects
 				(font
@@ -14331,7 +14067,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 267.97 118.11 0)
 			(effects
 				(font
@@ -14695,7 +14431,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 172.72 118.11 0)
 			(effects
 				(font
@@ -14973,7 +14709,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 161.29 118.11 0)
 			(effects
 				(font
@@ -15298,7 +15034,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909627"
+		(property "LCSC" "C14663"
 			(at 182.88 31.75 0)
 			(effects
 				(font
@@ -15404,7 +15140,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 149.86 138.43 0)
 			(effects
 				(font
@@ -15596,7 +15332,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 185.42 97.79 0)
 			(effects
 				(font
@@ -15702,7 +15438,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 149.86 158.75 0)
 			(effects
 				(font
@@ -15721,100 +15457,6 @@
 			(project "keyboard"
 				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
 					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:AP2112K-3.3")
-		(at 116.84 29.21 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ba873629-4407-4056-a32a-bf7948843c06")
-		(property "Reference" "U3"
-			(at 120.65 23.622 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "AP2112K-3.3"
-			(at 123.952 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 116.84 20.955 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/AP2112.pdf"
-			(at 116.84 26.67 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "600mA low dropout linear regulator, with enable pin, 3.8V-6V input voltage range, 3.3V fixed positive output, SOT-23-5"
-			(at 116.84 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "SOT-23-5"
-			(at 116.84 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C3021085"
-			(at 116.84 29.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "45111522-0ce4-44c6-b52b-22a289339a24")
-		)
-		(pin "4"
-			(uuid "95a37584-8602-41bd-9d07-c233eea43a7a")
-		)
-		(pin "5"
-			(uuid "25ac241d-1824-4ac2-bfd7-60065e1d8b1d")
-		)
-		(pin "2"
-			(uuid "d5da2bdf-726c-40ae-b5a4-97fd41a95963")
-		)
-		(pin "3"
-			(uuid "7bcebb10-f87e-449d-8701-6ed733677366")
-		)
-		(instances
-			(project ""
-				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
-					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -15968,7 +15610,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 232.41 118.11 0)
 			(effects
 				(font
@@ -16160,7 +15802,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 243.84 97.79 0)
 			(effects
 				(font
@@ -16179,95 +15821,6 @@
 			(project ""
 				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
 					(reference "D37")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 104.14 31.75 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c2d42acb-ba74-48c6-bafd-e0077229859f")
-		(property "Reference" "C2"
-			(at 100.33 30.4799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 101.346 33.02 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 103.1748 35.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 104.14 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 104.14 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "JLC" "0603"
-			(at 104.14 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "C2909627"
-			(at 104.14 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "a500ecf0-cc2e-4cde-b063-9cce6614fa81")
-		)
-		(pin "1"
-			(uuid "e5807fca-1031-400b-99eb-6140464467ce")
-		)
-		(instances
-			(project ""
-				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
-					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -16336,7 +15889,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C328335"
+		(property "LCSC" "C25804"
 			(at 119.38 54.61 90)
 			(effects
 				(font
@@ -16355,6 +15908,233 @@
 			(project ""
 				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
 					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "MCU_ST_STM32F0:STM32F072CBTx")
+		(at 60.96 128.27 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c55c8976-58c8-4101-a080-a3e4e440a2eb")
+		(property "Reference" "U2"
+			(at 65.6941 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "STM32F072CBT6"
+			(at 65.6941 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_QFP:LQFP-48_7x7mm_P0.5mm"
+			(at 48.26 163.83 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32f072cb.pdf"
+			(at 60.96 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "STMicroelectronics Arm Cortex-M0 MCU, 128KB flash, 16KB RAM, 48 MHz, 2.0-3.6V, 37 GPIO, LQFP48"
+			(at 60.96 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "JLC" "LQFP-48(7x7)"
+			(at 60.96 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C81720"
+			(at 60.96 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "37"
+			(uuid "03423d3b-e08c-4a32-a775-2c30f37aaae9")
+		)
+		(pin "48"
+			(uuid "91594713-1551-492f-a769-eac4fb00a16e")
+		)
+		(pin "47"
+			(uuid "5102b912-5aa8-465f-ae06-05a198f3f64a")
+		)
+		(pin "38"
+			(uuid "e2c6224c-a69b-4739-bfb8-9e24322f6790")
+		)
+		(pin "22"
+			(uuid "0ad7d3d9-ad38-46f6-adde-e3a8f2454a8d")
+		)
+		(pin "39"
+			(uuid "e61c6924-f77c-4b86-9ea2-135b59083758")
+		)
+		(pin "3"
+			(uuid "d25fbf44-a735-4c41-b945-0f2cdbefc709")
+		)
+		(pin "31"
+			(uuid "f6b53ca8-e68e-4ca0-a707-ecc09626ba2f")
+		)
+		(pin "29"
+			(uuid "9a53a05b-9308-4529-a99e-9b89716fba5f")
+		)
+		(pin "18"
+			(uuid "ca5437d9-5f6e-45d4-a53d-403a772519ca")
+		)
+		(pin "28"
+			(uuid "eba91083-f7bd-4314-86b0-f47c7fd12558")
+		)
+		(pin "20"
+			(uuid "87fbd73f-e65c-49a9-953e-3dc641684d74")
+		)
+		(pin "16"
+			(uuid "7a4433c2-f000-4609-a4ca-8cce3c8b5ee0")
+		)
+		(pin "30"
+			(uuid "5c47a7a9-12af-45c6-b145-8438dcef3fdc")
+		)
+		(pin "26"
+			(uuid "d8fb3737-37f4-4d33-af75-767c95d4d1df")
+		)
+		(pin "14"
+			(uuid "717791cd-1e52-4f7d-aea9-18e08904564c")
+		)
+		(pin "33"
+			(uuid "036d3581-9f72-422d-8952-f4a844bb2948")
+		)
+		(pin "2"
+			(uuid "6d4a7daf-9834-4c9e-ab33-bbf987a634d1")
+		)
+		(pin "7"
+			(uuid "3efd4d99-5ae0-429a-8e4a-a814cec8f7ea")
+		)
+		(pin "25"
+			(uuid "4eb4ce23-55db-4c9a-b064-8bebc3bd29fa")
+		)
+		(pin "27"
+			(uuid "18b640ce-dd5a-4639-af4d-9e0c4cc81ce3")
+		)
+		(pin "10"
+			(uuid "4d45cd5b-2da1-49d3-b00a-b3d70516b5ce")
+		)
+		(pin "21"
+			(uuid "359d49ab-4b4e-46b2-94c0-7d10acc78788")
+		)
+		(pin "32"
+			(uuid "ea37984a-0003-4adf-b518-6419c5d8f17f")
+		)
+		(pin "9"
+			(uuid "671ccdfc-a65f-4dcc-8c02-dac4ce9963c6")
+		)
+		(pin "19"
+			(uuid "afc55201-cbc3-44df-8525-1c28eb68e7cd")
+		)
+		(pin "4"
+			(uuid "2a4896f7-2ab3-4a37-bb3f-5723ec4edfe5")
+		)
+		(pin "36"
+			(uuid "82e7641f-2641-43d9-9b85-fc0fef30275b")
+		)
+		(pin "34"
+			(uuid "c7a056b6-5ecf-40d4-b1c7-e4b6572554bc")
+		)
+		(pin "17"
+			(uuid "87494351-162c-44c1-a8ed-105db421eda8")
+		)
+		(pin "40"
+			(uuid "22527a33-9707-4c9b-94b0-73f02d80a2c6")
+		)
+		(pin "23"
+			(uuid "9eb0524e-c131-4d2a-b60e-313fe8fd4463")
+		)
+		(pin "8"
+			(uuid "0be5ea26-6ddf-4c85-b495-763ff603454e")
+		)
+		(pin "6"
+			(uuid "241e5dbb-0861-4977-889d-c4bde7703140")
+		)
+		(pin "24"
+			(uuid "a55dd8f4-e183-4da6-b81e-be9575d214e2")
+		)
+		(pin "35"
+			(uuid "8d625515-0b4d-47b2-bd41-9cb73505c1d3")
+		)
+		(pin "44"
+			(uuid "592118b8-730a-485b-9ee4-3b71de2e0f0a")
+		)
+		(pin "42"
+			(uuid "45e5b83c-9193-4184-a044-e9e33c27184c")
+		)
+		(pin "15"
+			(uuid "07ce2154-e9ee-4a69-9e9f-34c27bf8c970")
+		)
+		(pin "45"
+			(uuid "65d534d1-4476-4a17-99e7-94ca09dfca6c")
+		)
+		(pin "41"
+			(uuid "e3f5a8b2-f873-454a-97a3-fcdff504d31f")
+		)
+		(pin "43"
+			(uuid "42424d22-25c4-4035-ba8d-3e92c5c2de10")
+		)
+		(pin "5"
+			(uuid "b8c978d4-572c-45f0-af6e-5d84452ad5b5")
+		)
+		(pin "12"
+			(uuid "3663102f-afc2-4f49-8904-d60091665547")
+		)
+		(pin "13"
+			(uuid "4df264e3-e357-4838-b2db-a851489117dc")
+		)
+		(pin "11"
+			(uuid "4bbe80a8-972e-45e8-af94-89649eab0667")
+		)
+		(pin "1"
+			(uuid "ef72f568-c680-4d57-9196-0e7a9303815d")
+		)
+		(pin "46"
+			(uuid "2f4427a9-f6a1-45db-8a43-a88623f16e59")
+		)
+		(instances
+			(project ""
+				(path "/1bd20b2e-ef64-4430-b9ef-083a75926971"
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -16423,7 +16203,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909627"
+		(property "LCSC" "C14663"
 			(at 173.99 57.15 90)
 			(effects
 				(font
@@ -16529,7 +16309,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 161.29 158.75 0)
 			(effects
 				(font
@@ -16962,7 +16742,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 267.97 138.43 0)
 			(effects
 				(font
@@ -17068,7 +16848,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 185.42 158.75 0)
 			(effects
 				(font
@@ -17326,7 +17106,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 267.97 97.79 0)
 			(effects
 				(font
@@ -17432,7 +17212,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 137.16 158.75 0)
 			(effects
 				(font
@@ -17624,7 +17404,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 161.29 97.79 0)
 			(effects
 				(font
@@ -17710,7 +17490,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C319148"
+		(property "LCSC" "C2686968"
 			(at 31.75 40.64 0)
 			(effects
 				(font
@@ -17781,7 +17561,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 93.98 31.75 0)
+		(at 104.14 31.75 0)
 		(mirror y)
 		(unit 1)
 		(exclude_from_sim no)
@@ -17790,7 +17570,7 @@
 		(dnp no)
 		(uuid "d9c23f29-2dc8-432e-85a6-e6af56fae5cc")
 		(property "Reference" "C1"
-			(at 90.17 30.4799 0)
+			(at 100.33 30.4799 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17798,8 +17578,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1u"
-			(at 90.17 33.0199 0)
+		(property "Value" "10u"
+			(at 100.33 33.0199 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17808,7 +17588,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 93.0148 35.56 0)
+			(at 103.1748 35.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17817,7 +17597,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 93.98 31.75 0)
+			(at 104.14 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17826,7 +17606,7 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
-			(at 93.98 31.75 0)
+			(at 104.14 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17835,7 +17615,7 @@
 			)
 		)
 		(property "JLC" "0603"
-			(at 93.98 31.75 0)
+			(at 104.14 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17843,8 +17623,8 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2691405"
-			(at 93.98 31.75 0)
+		(property "LCSC" "C19702"
+			(at 104.14 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18189,7 +17969,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2909627"
+		(property "LCSC" "C14663"
 			(at 205.74 31.75 0)
 			(effects
 				(font
@@ -18381,7 +18161,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 196.85 158.75 0)
 			(effects
 				(font
@@ -18469,7 +18249,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C2691405"
+		(property "LCSC" "C15849"
 			(at 275.59 35.56 0)
 			(effects
 				(font
@@ -18775,7 +18555,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 232.41 97.79 0)
 			(effects
 				(font
@@ -18948,7 +18728,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 172.72 138.43 0)
 			(effects
 				(font
@@ -19140,7 +18920,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 149.86 118.11 0)
 			(effects
 				(font
@@ -19246,7 +19026,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C402213"
+		(property "LCSC" "C81598"
 			(at 243.84 118.11 0)
 			(effects
 				(font
@@ -19616,7 +19396,7 @@
 	)
 	(symbol
 		(lib_id "power:VBUS")
-		(at 93.98 25.4 0)
+		(at 104.14 25.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19625,7 +19405,7 @@
 		(fields_autoplaced yes)
 		(uuid "ffe267d5-6d77-45c5-bda6-b86740c23c2e")
 		(property "Reference" "#PWR07"
-			(at 93.98 29.21 0)
+			(at 104.14 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19634,7 +19414,7 @@
 			)
 		)
 		(property "Value" "VBUS"
-			(at 93.98 20.32 0)
+			(at 104.14 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19642,7 +19422,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 25.4 0)
+			(at 104.14 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19651,7 +19431,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 25.4 0)
+			(at 104.14 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19660,7 +19440,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 93.98 25.4 0)
+			(at 104.14 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
